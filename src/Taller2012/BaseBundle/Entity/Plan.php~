@@ -1,0 +1,56 @@
+<?php
+
+namespace Taller2012\BaseBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Taller2012\BaseBundle\Entity\Plan
+ *
+ * @ORM\Table(name="plan")
+ * @ORM\Entity
+ */
+class Plan
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer $nresol
+     *
+     * @ORM\Column(name="nResol", type="integer", nullable=true)
+     */
+    private $nresol;
+
+    /**
+     * @var integer $anoresol
+     *
+     * @ORM\Column(name="anoResol", type="integer", nullable=true)
+     */
+    private $anoresol;
+
+    /**
+     * @var integer $cantoptativ
+     *
+     * @ORM\Column(name="cantOptativ", type="integer", nullable=true)
+     */
+    private $cantoptativ;
+
+    /**
+     * @var Carrera
+     *
+     * @ORM\ManyToOne(targetEntity="Carrera")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idCarrera", referencedColumnName="id")
+     * })
+     */
+    private $idcarrera;
+
+
+}

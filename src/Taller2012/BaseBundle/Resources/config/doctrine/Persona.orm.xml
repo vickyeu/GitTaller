@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Taller2012\BaseBundle\Entity\Persona" table="persona">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="apellido" type="string" column="apellido" length="45"/>
+    <field name="nombre" type="string" column="nombre" length="45"/>
+    <field name="dni" type="string" column="dni" length="45"/>
+    <field name="nacimiento" type="string" column="nacimiento" length="45"/>
+    <field name="domicilio" type="string" column="domicilio" length="45"/>
+    <field name="email" type="string" column="email" length="45"/>
+    <field name="telefono" type="string" column="telefono" length="45"/>
+    <field name="cuil" type="string" column="cuil" length="45"/>
+    <field name="nacionalidad" type="string" column="nacionalidad" length="45"/>
+    <field name="nroalumno" type="string" column="nroAlumno" length="45"/>
+    <field name="nroprofesor" type="string" column="nroProfesor" length="45"/>
+    <many-to-one field="idlocalidad" target-entity="Localidad" orphan-removal="">
+      <join-columns>
+        <join-column name="idLocalidad" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Cursa" table="cursa">
+    <change-tracking-policy>DEFERRED_IMPLICIT</change-tracking-policy>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="notafinal" type="integer" column="notaFinal"/>
+    <field name="regularidad" type="string" column="regularidad" length="45"/>
+    <many-to-one field="idpersona" target-entity="Persona" orphan-removal="">
+      <join-columns>
+        <join-column name="idPersona" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idinstancia" target-entity="Instancia" orphan-removal="">
+      <join-columns>
+        <join-column name="idInstancia" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <lifecycle-callbacks/>
+  </entity>
+</doctrine-mapping>

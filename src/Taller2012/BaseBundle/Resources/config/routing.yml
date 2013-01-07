@@ -1,0 +1,36 @@
+#Taller2012BaseBundle_homepage:
+#    pattern:  /index
+#    defaults: { _controller: Taller2012BaseBundle:Default:index }
+Taller2012BaseBundle_listado:
+    pattern:  /listadoAlumnos
+    defaults: { _controller: Taller2012BaseBundle:Default:listadoAlumnos }
+Taller2012BaseBundle_cargaPersona:
+    pattern: /cargaPersona
+    defaults: { _controller: Taller2012BaseBundle:Persona:new }
+Taller2012BaseBundle_base:
+    pattern: /bIndex
+    defaults: { _controller: Taller2012BaseBundle:Default:index }  
+Taller2012BaseBundle_altaLocalidad:
+    pattern: /altaLocalidad
+    defaults: { _controller: Taller2012BaseBundle:Altas:newLocalidad }
+Taller2012BaseBundle_altaProvincia:
+    pattern: /altaProvincia
+    defaults: { _controller: Taller2012BaseBundle:Altas:newProvincia }
+Taller2012BaseBundle_altaCarrera:
+    pattern: /altaCarrera
+    defaults: { _controller: Taller2012BaseBundle:Altas:newCarrera }
+Taller2012BaseBundle_altaPlanCarrera:
+    pattern: /altaPlanCarrera
+    defaults: { _controller: Taller2012BaseBundle:Altas:newPlanCarrera }
+Taller2012BaseBundle_altaCohorte:
+    pattern: /altaCohorte
+    defaults: { _controller: Taller2012BaseBundle:Altas:newCohorte }
+Taller2012BaseBundle_altaCurso:
+    pattern: /altaCurso
+    defaults: { _controller: Taller2012BaseBundle:Altas:newCurso }
+Taller2012BaseBundle_altaInstancia:
+    pattern: /altaInstancia
+    defaults: { _controller: Taller2012BaseBundle:Altas:newInstancia }
+Taller2012BaseBundle_altaUsuario:
+    pattern: /altaUsuario
+    defaults: { _controller: Taller2012BaseBundle:Altas:newUsuario }

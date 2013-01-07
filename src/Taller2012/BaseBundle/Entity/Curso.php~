@@ -1,0 +1,39 @@
+<?php
+
+namespace Taller2012\BaseBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Taller2012\BaseBundle\Entity\Curso
+ *
+ * @ORM\Table(name="curso")
+ * @ORM\Entity
+ */
+class Curso
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer $codigo
+     *
+     * @ORM\Column(name="codigo", type="integer", nullable=true)
+     */
+    private $codigo;
+
+    /**
+     * @var string $nombre
+     *
+     * @ORM\Column(name="nombre", type="string", length=45, nullable=true)
+     */
+    private $nombre;
+
+
+}

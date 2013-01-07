@@ -1,0 +1,59 @@
+<?php
+
+namespace Taller2012\BaseBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Taller2012\BaseBundle\Entity\Plancurso
+ *
+ * @ORM\Table(name="plancurso")
+ * @ORM\Entity
+ */
+class Plancurso
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer $puntos
+     *
+     * @ORM\Column(name="puntos", type="integer", nullable=true)
+     */
+    private $puntos;
+
+    /**
+     * @var boolean $obligatorio
+     *
+     * @ORM\Column(name="obligatorio", type="boolean", nullable=true)
+     */
+    private $obligatorio;
+
+    /**
+     * @var Plan
+     *
+     * @ORM\ManyToOne(targetEntity="Plan")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idPlan", referencedColumnName="id")
+     * })
+     */
+    private $idplan;
+
+    /**
+     * @var Curso
+     *
+     * @ORM\ManyToOne(targetEntity="Curso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idCurso", referencedColumnName="id")
+     * })
+     */
+    private $idcurso;
+
+
+}

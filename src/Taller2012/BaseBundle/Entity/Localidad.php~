@@ -1,0 +1,46 @@
+<?php
+
+namespace Taller2012\BaseBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Taller2012\BaseBundle\Entity\Localidad
+ *
+ * @ORM\Table(name="localidad")
+ * @ORM\Entity
+ */
+class Localidad
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer $cp
+     *
+     * @ORM\Column(name="CP", type="integer", nullable=true)
+     */
+    private $cp;
+
+    /**
+     * @var string $nombre
+     *
+     * @ORM\Column(name="nombre", type="string", length=45, nullable=true)
+     */
+    private $nombre;
+
+    /**
+     * @var integer $idprovincia
+     *
+     * @ORM\Column(name="idProvincia", type="integer", nullable=true)
+     */
+    private $idprovincia;
+
+
+}

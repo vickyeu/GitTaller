@@ -1,0 +1,59 @@
+<?php
+
+namespace Taller2012\BaseBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Taller2012\BaseBundle\Entity\Cursa
+ *
+ * @ORM\Table(name="cursa")
+ * @ORM\Entity
+ */
+class Cursa
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var integer $notafinal
+     *
+     * @ORM\Column(name="notaFinal", type="integer", nullable=true)
+     */
+    private $notafinal;
+
+    /**
+     * @var string $regularidad
+     *
+     * @ORM\Column(name="regularidad", type="string", length=45, nullable=true)
+     */
+    private $regularidad;
+
+    /**
+     * @var Persona
+     *
+     * @ORM\ManyToOne(targetEntity="Persona")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idPersona", referencedColumnName="id")
+     * })
+     */
+    private $idpersona;
+
+    /**
+     * @var Instancia
+     *
+     * @ORM\ManyToOne(targetEntity="Instancia")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idInstancia", referencedColumnName="id")
+     * })
+     */
+    private $idinstancia;
+
+
+}

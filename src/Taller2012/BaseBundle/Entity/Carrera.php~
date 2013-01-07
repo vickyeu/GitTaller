@@ -1,0 +1,60 @@
+<?php
+
+namespace Taller2012\BaseBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Taller2012\BaseBundle\Entity\Carrera
+ *
+ * @ORM\Table(name="carrera")
+ * @ORM\Entity
+ */
+class Carrera
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string $nombre
+     *
+     * @ORM\Column(name="nombre", type="string", length=45, nullable=false)
+     */
+    private $nombre;
+
+    /**
+     * @var string $categoria
+     *
+     * @ORM\Column(name="categoria", type="string", length=45, nullable=true)
+     */
+    private $categoria;
+
+    /**
+     * @var string $coneau
+     *
+     * @ORM\Column(name="coneau", type="string", length=45, nullable=true)
+     */
+    private $coneau;
+
+    /**
+     * @var boolean $emitetitulo
+     *
+     * @ORM\Column(name="emiteTitulo", type="boolean", nullable=true)
+     */
+    private $emitetitulo;
+
+    /**
+     * @var string $observaciones
+     *
+     * @ORM\Column(name="observaciones", type="string", length=45, nullable=true)
+     */
+    private $observaciones;
+
+
+}

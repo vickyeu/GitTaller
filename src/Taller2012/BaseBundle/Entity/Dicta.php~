@@ -1,0 +1,45 @@
+<?php
+
+namespace Taller2012\BaseBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Taller2012\BaseBundle\Entity\Dicta
+ *
+ * @ORM\Table(name="dicta")
+ * @ORM\Entity
+ */
+class Dicta
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var Persona
+     *
+     * @ORM\ManyToOne(targetEntity="Persona")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idPersona", referencedColumnName="id")
+     * })
+     */
+    private $idpersona;
+
+    /**
+     * @var Instancia
+     *
+     * @ORM\ManyToOne(targetEntity="Instancia")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idInstancia", referencedColumnName="id")
+     * })
+     */
+    private $idinstancia;
+
+
+}

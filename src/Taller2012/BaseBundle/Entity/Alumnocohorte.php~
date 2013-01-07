@@ -1,0 +1,52 @@
+<?php
+
+namespace Taller2012\BaseBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Taller2012\BaseBundle\Entity\Alumnocohorte
+ *
+ * @ORM\Table(name="alumnocohorte")
+ * @ORM\Entity
+ */
+class Alumnocohorte
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string $estado
+     *
+     * @ORM\Column(name="estado", type="string", length=45, nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var Persona
+     *
+     * @ORM\ManyToOne(targetEntity="Persona")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idPersona", referencedColumnName="id")
+     * })
+     */
+    private $idpersona;
+
+    /**
+     * @var Cohorte
+     *
+     * @ORM\ManyToOne(targetEntity="Cohorte")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idCohorte", referencedColumnName="id")
+     * })
+     */
+    private $idcohorte;
+
+
+}
