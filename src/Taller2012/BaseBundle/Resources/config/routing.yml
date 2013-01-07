@@ -1,6 +1,6 @@
-#Taller2012BaseBundle_homepage:
-#    pattern:  /index
-#    defaults: { _controller: Taller2012BaseBundle:Default:index }
+Taller2012BaseBundle_homepage:
+    pattern:  /index
+    defaults: { _controller: Taller2012BaseBundle:Default:index }
 Taller2012BaseBundle_listado:
     pattern:  /listadoAlumnos
     defaults: { _controller: Taller2012BaseBundle:Default:listadoAlumnos }

@@ -10,8 +10,8 @@ class DefaultController extends Controller
     
     public function indexAction()
     {
-        //return $this->render('Taller2012BaseBundle:Default:index.html.twig', array());
-        return $this->render('Taller2012BaseBundle:Default:layoutBase.html.twig', array());
+        return $this->render('Taller2012BaseBundle:Default:index.html.twig', array());
+        //return $this->render('Taller2012BaseBundle:Default:layoutBase.html.twig', array());
     }
     public function listadoAlumnosAction()
     { 

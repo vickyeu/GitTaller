@@ -140,6 +140,11 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // Taller2012BaseBundle_homepage
+        if ($pathinfo === '/index') {
+            return array (  '_controller' => 'Taller2012\\BaseBundle\\Controller\\DefaultController::indexAction',  '_route' => 'Taller2012BaseBundle_homepage',);
+        }
+
         // Taller2012BaseBundle_listado
         if ($pathinfo === '/listadoAlumnos') {
             return array (  '_controller' => 'Taller2012\\BaseBundle\\Controller\\DefaultController::listadoAlumnosAction',  '_route' => 'Taller2012BaseBundle_listado',);

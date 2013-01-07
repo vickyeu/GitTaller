@@ -33,6 +33,7 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_configurator_home' => true,
        '_configurator_step' => true,
        '_configurator_final' => true,
+       'Taller2012BaseBundle_homepage' => true,
        'Taller2012BaseBundle_listado' => true,
        'Taller2012BaseBundle_cargaPersona' => true,
        'Taller2012BaseBundle_base' => true,
@@ -165,6 +166,11 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
     private function get_configurator_finalRouteInfo()
     {
         return array(array (), array (  '_controller' => 'Sensio\\Bundle\\DistributionBundle\\Controller\\ConfiguratorController::finalAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/_configurator/final',  ),));
+    }
+
+    private function getTaller2012BaseBundle_homepageRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Taller2012\\BaseBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/index',  ),));
     }
 
     private function getTaller2012BaseBundle_listadoRouteInfo()
